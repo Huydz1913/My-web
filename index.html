@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body> <div id="snow"></div>
-<body>  <script>
+<body>     <script>
     function createSnowflake() {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
@@ -16,15 +16,15 @@
         snowflake.style.left = Math.random() * 100 + 'vw';
         
         // Tạo độ rơi ngẫu nhiên
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // thời gian rơi từ 5s đến 10s
-        snowflake.style.animationDelay = Math.random() * 10 + 's'; // thời gian delay ngẫu nhiên
+        snowflake.style.animationDuration = Math.random() * 2 + 3 + 's'; // thời gian rơi từ 5s đến 10s
+        snowflake.style.animationDelay = Math.random() * 5 + 's'; // thời gian delay ngẫu nhiên
         
         document.getElementById('snow').appendChild(snowflake);
         
         // Xóa bông tuyết khi nó rơi xong
         setTimeout(() => {
             snowflake.remove();
-        }, 10000); // Sau 10 giây, bông tuyết sẽ được xóa
+        }, 1000); // Sau 10 giây, bông tuyết sẽ được xóa
     }
 
     // Tạo tuyết rơi mỗi 100ms
