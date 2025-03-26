@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="snow"></div> <!-- Phần tử chứa tuyết rơi -->
+    <!-- Phần tử chứa tuyết rơi -->
+    <div id="snow"></div>
 
     <header>
         <div class="profile">
@@ -42,6 +43,7 @@
         <p>© 2025 Huy</p>
     </footer>
 
+    <!-- JavaScript để tạo hiệu ứng tuyết rơi -->
     <script>
         function createSnowflake() {
             const snowflake = document.createElement('div');
@@ -55,3 +57,15 @@
             snowflake.style.animationDelay = Math.random() * 10 + 's'; // Thời gian delay ngẫu nhiên
 
             document.getElementById('snow').appendChild(snowflake);
+
+            // Xóa bông tuyết khi rơi xong
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000); // Sau 10 giây
+        }
+
+        // Tạo tuyết rơi mỗi 100ms
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>
