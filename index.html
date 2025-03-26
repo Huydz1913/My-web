@@ -51,6 +51,14 @@
             snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
             snowflake.style.animationDelay = Math.random() * 10 + 's';
 
+            function updateStats(likes, follows, shares) {
+    document.querySelector('.like').textContent = `❤ ${likes}`;
+    document.querySelector('.follow').textContent = `👥 ${follows}`;
+    document.querySelector('.share').textContent = `🔁 ${shares}`;
+}
+
+updateStats(250000, 100000, 500000);  // Cập nhật số liệu
+
             document.getElementById('snow').appendChild(snowflake);
 
             setTimeout(() => {
