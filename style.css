@@ -1,63 +1,8 @@
-/* Mã CSS cũ của bạn */
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-/* Các hiệu ứng mới */
-.avatar {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.avatar:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.social-links ul li a:hover {
-    color: #ff6347;
-    transform: translateY(-5px);
-}
-
-section {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        h1 {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0% { color: black; }
-    50% { color: transparent; }
-    100% { color: black; }
-}
-        section {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-        body {
-    background-color: #f0f8ff;
+body {
+    background-color: #f0f8ff; /* Màu nền nhẹ nhàng cho mùa đông */
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Ngăn không cho thanh cuộn xuất hiện */
 }
 
 #snow {
@@ -82,21 +27,9 @@ section {
 
 @keyframes fall {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(-10px); /* Bắt đầu từ trên cùng */
     }
     100% {
-        transform: translateY(100vh);
+        transform: translateY(100vh); /* Rơi xuống dưới */
     }
-}
-    }
-}
-
-h1 {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0% { color: black; }
-    50% { color: transparent; }
-    100% { color: black; }
 }
