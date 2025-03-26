@@ -6,61 +6,52 @@
     <title>Giới thiệu bản thân</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> <div id="snow"></div>
-<body>     <script>
-    function createSnowflake() {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        // Đặt vị trí ngẫu nhiên
-        snowflake.style.left = Math.random() * 100 + 'vw';
-        
-        // Tạo độ rơi ngẫu nhiên
-        snowflake.style.animationDuration = Math.random() * 2 + 3 + 's'; // thời gian rơi từ 5s đến 10s
-        snowflake.style.animationDelay = Math.random() * 5 + 's'; // thời gian delay ngẫu nhiên
-        
-        document.getElementById('snow').appendChild(snowflake);
-        
-        // Xóa bông tuyết khi nó rơi xong
-        setTimeout(() => {
-            snowflake.remove();
-        }, 1000); // Sau 10 giây, bông tuyết sẽ được xóa
-    }
+<body>
+    <div id="snow"></div> <!-- Phần tử chứa tuyết rơi -->
 
-    // Tạo tuyết rơi mỗi 100ms
-    setInterval(createSnowflake, 100);
-</script>
     <header>
         <div class="profile">
             <img src="https://link-to-your-avatar.com/avatar.jpg" alt="Ảnh đại diện" class="avatar">
-            <h1>Ahoj Jsem Petr </h1>
+            <h1>Chào bạn, tôi là Huy!</h1>
         </div>
-        <p class="bio">Jsem Barber Karvina , Skin fade, Barva 🔥!</p>
+        <p class="bio">Tôi là một thợ barber, đam mê thiết kế ornament và chia sẻ những kỹ thuật cắt tóc sáng tạo. Hãy kết nối với tôi để cùng học hỏi!</p>
     </header>
 
     <section class="social-links">
         <h2>Liên kết mạng xã hội</h2>
         <ul>
-            <li><a href="https://www.facebook.com/nguyenquanghuydeviotewuila1x30" target="_blank">Facebook</a></li>
+            <li><a href="https://facebook.com/yourprofile" target="_blank">Facebook</a></li>
             <li><a href="https://tiktok.com/@yourprofile" target="_blank">TikTok</a></li>
             <li><a href="https://instagram.com/yourprofile" target="_blank">Instagram</a></li>
         </ul>
     </section>
 
     <section class="contact-info">
-        <h2> Contacts </h2>
-        <p>Email: <a href="mailto:nguyenhuysuport006@gmail.com ">your.email@example.com</a></p>
-        <p>Số điện thoại: 720 200 881 </p>
+        <h2>Thông tin liên lạc</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>Số điện thoại: 0123-456-789</p>
     </section>
 
     <section class="stats">
         <h2>Thông tin thêm</h2>
-        <p>Lượt thích: 78k</p>
-        <p>Lượt theo dõi: 578k</p>
+        <p>Lượt thích: 250</p>
+        <p>Lượt theo dõi: 1000</p>
     </section>
 
     <footer>
         <p>© 2025 Huy</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+
+            // Đặt vị trí ngẫu nhiên
+            snowflake.style.left = Math.random() * 100 + 'vw'; // Vị trí ngang ngẫu nhiên
+
+            // Tạo độ rơi ngẫu nhiên
+            snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Thời gian rơi ngẫu nhiên
+            snowflake.style.animationDelay = Math.random() * 10 + 's'; // Thời gian delay ngẫu nhiên
+
+            document.getElementById('snow').appendChild(snowflake);
