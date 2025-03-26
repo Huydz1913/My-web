@@ -31,6 +31,15 @@ section {
     }
     to {
         opacity: 1;
+        h1 {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { color: black; }
+    50% { color: transparent; }
+    100% { color: black; }
+}
     }
 }
 
