@@ -1,63 +1,45 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
+/* Mã CSS cũ của bạn */
 .avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 20px;
 }
 
-.bio {
-    font-size: 18px;
-    margin: 20px 0;
+/* Các hiệu ứng mới */
+.avatar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-links ul li a:hover {
+    color: #ff6347;
+    transform: translateY(-5px);
 }
 
 section {
-    padding: 20px;
-    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-li {
-    margin: 10px 0;
+h1 {
+    animation: blink 1s infinite;
 }
 
-a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-size: 20px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+@keyframes blink {
+    0% { color: black; }
+    50% { color: transparent; }
+    100% { color: black; }
 }
